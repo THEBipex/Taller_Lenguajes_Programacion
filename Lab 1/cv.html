@@ -10,8 +10,7 @@
             line-height: 1.6;
             color: #333;
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 10%;
             background-color: #e1e1dd ;
         }
         h1{
@@ -34,21 +33,38 @@
         .contac-info{
             margin-bottom: 20px;
             border-bottom: 2px solid gray;
-
+            
         }
         .section{
             margin-bottom: 25px;
         }
-        .job-title {
-            font-weight: bold;
+        .experience-item, .education-item{
             display: flex;
-            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .experience-header, .education-header{
+            display: flex;
+            width: 100%;
         }
         .company, .institution {
+            float:left ;
             font-weight: bold;
+            flex: 1;
         }
         .location{
+            flex: 1;
+            float: right;
+            text-align: right;
+        }
+        .position, .degree {
+            float: left;
             font-style: italic;
+            margin: 5px 0;
+        }
+        .date {
+            float: right;
+            font-style: italic;
+            color: #555;
         }
         .skill-list {
             display: grid;
@@ -59,6 +75,14 @@
         }
         li {
             margin-bottom: 5px;
+        }
+        @media (max-with: 600px){
+            .skills- {
+                grid-template-columns: 1fr;
+            }
+            .title {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -80,26 +104,24 @@
 
     <div class="section">
         <h3>EXPERENCIA LABORAL</h3>
-        <div class="job">
-            <div class="job_title">
-                <span class="">DELMONTE</span>
-                <span>San Felipe, Chile</span>
-                <div> 
-                    Operario no Especializado <em>Enero 2024 - Febrero 2024</em>
-                </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="company">DELMONTE</div>
+                <div class="location">San Felipe, Chile</div>
             </div>
+            <div class="position">Operario no especalizado</div>
+            <div class="date">Enero 2024 - Febrero 2024</div>
         </div>
         <div>
             <div>
-                <span>MUNICIPALIDAD CALLELARGA</span>
-                <span>Calle Larga, Chile</span>
-                <div>
-                    Praticante <em>Enero 2022 - Febrero 2022</em>
+                <div>MUNICIPALIDAD CALLELARGA</div>
+                <div>Calle Larga, Chile</div>
+                <div>Praticante</div>
+                <div>Enero 2022 - Febrero 2022</div>
                     <ul>
                         <li>Mantención de redes y computadores dentro de la municipalidad.</li>
                         <li>Proceso de logistica dentro de la municipalidad</li>
                     </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -131,7 +153,7 @@
     </div>
     <div>
         <h3>HABILIDADES TECNICAS</h3>
-        <div>
+        <div class="skills">
             <strong>Lenguajes de Programacion: </strong> Java, Python, SQL, C++
         </div>
         <div>

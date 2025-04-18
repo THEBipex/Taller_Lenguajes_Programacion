@@ -1,0 +1,81 @@
+body {
+    background:#1ba11a url(/img/back.png) top left repeat;
+    font-family:Comic Sans, Comic Sans MS, cursive;
+}
+
+nav{
+    background-color: green;
+}
+.logo {
+    width: 40px;
+    height: auto;
+}
+#walter-container {
+    margin: 0 10%;
+    text-align: center;
+    padding: 20px;
+}
+#walter-container h1 {
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 450%;
+    font-weight: bold;
+    padding-top: 12px;
+}
+#walter-container h3 {
+    font-size: 170%;
+    font-weight: normal;
+}
+.parraf {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: normal;
+    text-align: left;
+}
+.yellow {
+    color: #fff54f;
+}
+
+.first-img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 15px;
+}
+/* Estilos para el carrusel */
+#carouselExampleIndicators {
+    max-width: 50%; /* Ajusta este valor según necesites */
+    margin: 0 auto; /* Centra el carrusel */
+    height: 40%;
+}
+
+.carousel-inner {
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 70%;
+    height: auto;
+    object-fit: cover; /* Mantiene la proporción cubriendo el espacio */
+}
+
+.first-parraf {
+    font-size: 25px;
+}
+
+.family-img {
+    margin: 5% 5%;
+}
+
+.white {
+    color: #fff;
+}
+.phrase {
+    color: #fff54f;
+    font-size: 41px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5%;
+    justify-content: space-between;
+}

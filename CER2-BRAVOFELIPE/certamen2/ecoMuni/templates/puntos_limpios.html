@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4">Puntos Limpios Disponibles</h2>
+    
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="list-group">
+                {% for punto in puntos %}
+                <div class="list-group-item mb-3">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ punto.nombre }}</h5>
+                        <small>📍</small>
+                    </div>
+                    <p class="mb-1">{{ punto.direccion }}</p>
+                    <small>{{ punto.horario }}</small>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Cómo llegar?</h5>
+                        <p class="card-text">Todos nuestros puntos limpios están señalizados y cuentan con personal capacitado para orientarte.</p>
+                        <a href="#" class="btn btn-success">Ver mapa interactivo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

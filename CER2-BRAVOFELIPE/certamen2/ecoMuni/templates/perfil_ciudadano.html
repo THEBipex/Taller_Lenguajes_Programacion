@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2 class="mb-4">Mi Perfil</h2>
+            
+            <!-- Información del usuario -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Datos Personales</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Nombre:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Dirección:</strong> {{ user.ciudadano.direccion }}</p>
+                    <p><strong>Teléfono:</strong> {{ user.ciudadano.telefono }}</p>
+                    <a href="#" class="btn btn-outline-primary">Editar perfil</a>
+                </div>
+            </div>
+            
+            <!-- Historial de solicitudes -->
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Mis Solicitudes</h5>
+                    <a href="{% url 'nueva_solicitud' %}" class="btn btn-success btn-sm">Nueva Solicitud</a>
+                </div>
+                <div class="card-body">
+                    {% if solicitudes %}
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Material</th>
+                                    <th>Cantidad</th>
+                                    <th>Fecha Estimada</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for solicitud in solicitudes %}
+                                <tr>
+                                    <td>{{ solicitud.id }}</td>
+                                    <td>{{ solicitud.material.nombre }}</td>
+                                    <td>{{ solicitud.cantidad }}</td>
+                                    <td>{{ solicitud.fecha_estimada }}</td>
+                                    <td>
+                                        <span class="badge 
+                                            {% if solicitud.estado == 'P' %}bg-warning
+                                            {% elif solicitud.estado == 'R' %}bg-primary
+                                            {% else %}bg-success{% endif %}">
+                                            {{ solicitud.get_estado_display }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-info">Detalles</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No has realizado ninguna solicitud aún.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

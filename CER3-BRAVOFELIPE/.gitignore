@@ -1,1 +1,25 @@
+# Base
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+
+# Entorno virtual
 env/
+venv/
+ENV/
+.venv/
+
+# Archivos temporales
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Archivos compilados
+staticfiles/
+media/

@@ -1,0 +1,32 @@
+{% extends 'talleres/base.html' %}
+
+{% block title %}Proponer Taller{% endblock %}
+
+{% block content %}
+<h2>Proponer un nuevo taller</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+        <div class="mb-3">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.errors %}
+                <div class="text-danger">{{ field.errors }}</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <div class="d-flex justify-content-between mt-3">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Volver al inicio</a>
+        <button type="submit" class="btn btn-success">Proponer</button>
+    </div>
+</form>
+
+{% if error %}
+    <div class="alert alert-danger mt-3">
+        Error al enviar la propuesta. Revisa los datos ingresados.
+    </div>
+{% endif %}
+{% endblock %}

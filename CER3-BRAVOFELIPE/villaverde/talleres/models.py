@@ -37,7 +37,7 @@ class Taller(models.Model):
     estado = models.CharField(max_length=10, choices=ESTADO_CHOICES, default='pendiente')
     observacion = models.TextField(null=True, blank=True)
 
-    profesor = models.ForeignKey(Profesor, on_delete=models.CASCADE)
+    profesor = models.CharField(max_length=100)
     lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 

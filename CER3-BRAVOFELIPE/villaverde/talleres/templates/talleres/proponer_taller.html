@@ -24,9 +24,9 @@
     </div>
 </form>
 
-{% if error %}
-    <div class="alert alert-danger mt-3">
-        Error al enviar la propuesta. Revisa los datos ingresados.
+{% if errores %}
+    <div class="alert alert-danger">
+        {{ errores }}
     </div>
 {% endif %}
 {% endblock %}

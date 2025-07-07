@@ -41,7 +41,8 @@ class ProponerTallerView(View):
             if response.status_code in [200, 201]:
                 return redirect('home')
         
-        return render(request, 'talleres/proponer_taller.html', {'form': form, 'error': True})
+        return render(request, 'talleres/proponer_taller.html', {'form': form, 'error': True, 'errores': form.errors})
+
     
 class CustomLoginView(LoginView):
     template_name = 'talleres/login.html'

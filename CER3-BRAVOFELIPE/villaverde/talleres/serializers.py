@@ -7,9 +7,9 @@ class PropuestaTallerSerializer(serializers.ModelSerializer):
         model   = Taller
         fields  = ['titulo', 'fecha', 'duracion_horas', 'profesor', 'lugar', 'categoria']
 
-        def create(self, validated_data):
-            user = self.context['request'].user
-            return Taller.objects.create(propuesto_por=user, **validated_data)
+    def create(self, validated_data):
+        user = self.context['request'].user
+        return Taller.objects.create(propuesto_por=user, **validated_data)
         
 class ProfesorSerializer(serializers.ModelSerializer):
     class Meta:

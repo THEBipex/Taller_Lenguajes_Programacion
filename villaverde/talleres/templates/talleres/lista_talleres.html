@@ -1,0 +1,37 @@
+{% extends 'talleres/base.html' %}
+
+{% block title %}Talleres Disponibles{% endblock %}
+
+{% block content %}
+<h1>Talleres Comunitarios Disponibles</h1>
+
+<form method="get" class="mb-3">
+    <select name="categoria" class="form-select" onchange="this.form.submit()">
+        <option value="">Todas las categorías</option>
+        {% for cat in categorias %}
+            <option value="{{ cat.id }}" {% if request.GET.categoria == cat.id|stringformat:"s" %}selected{% endif %}>
+                {{ cat.nombre }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
+
+<div class="row">
+{% for taller in talleres %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ taller.titulo }}</h5>
+                <p><strong>Fecha:</strong> {{ taller.fecha }}</p>
+                <p><strong>Duración:</strong> {{ taller.duracion_horas }} horas</p>
+                <p><strong>Profesor:</strong> {{ taller.profesor.nombre_completo }}</p>
+                <p><strong>Lugar:</strong> {{ taller.lugar.nombre }}</p>
+                <p><strong>Categoría:</strong> {{ taller.categoria.nombre }}</p>
+            </div>
+        </div>
+    </div>
+{% empty %}
+    <p>No hay talleres disponibles.</p>
+{% endfor %}
+</div>
+{% endblock %}

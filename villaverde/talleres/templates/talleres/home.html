@@ -1,0 +1,11 @@
+{% extends 'talleres/base.html' %}
+
+{% block title %}Inicio | Villa Verde{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Bienvenido a los Talleres Comunitarios de Villa Verde</h1>
+    <p class="lead">Explora y participa en actividades para todos los gustos y edades. Nuestra comunidad crece con tu participación.</p>
+    <a href="{% url 'talleres_disponibles' %}" class="btn btn-primary mt-4">Ver Talleres Disponibles</a>
+</div>
+{% endblock %}

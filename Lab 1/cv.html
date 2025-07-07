@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Bravo Viguera CV</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 10%;
+            background-color: #e1e1dd ;
+        }
+        h1{
+            color: #2c3e50;
+        }
+        h3 {
+            color: #4a555d;
+            border-left: 4px solid gray;
+            border-bottom: 2px solid gray;
+            padding-left: 10px;
+        }
+        p {
+            font-style: italic;
+            text-align: justify;
+        }
+        .header{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contac-info{
+            margin-bottom: 20px;
+            border-bottom: 2px solid gray;
+            
+        }
+        .section{
+            margin-bottom: 25px;
+        }
+        .experience-item, .education-item{
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .experience-header, .education-header{
+            display: flex;
+            width: 100%;
+        }
+        .company, .institution {
+            float:left ;
+            font-weight: bold;
+            flex: 1;
+        }
+        .location{
+            flex: 1;
+            float: right;
+            text-align: right;
+        }
+        .position, .degree {
+            float: left;
+            font-style: italic;
+            margin: 5px 0;
+        }
+        .date {
+            float: right;
+            font-style: italic;
+            color: #555;
+        }
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        ul{
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        @media (max-with: 600px){
+            .skills- {
+                grid-template-columns: 1fr;
+            }
+            .title {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Felipe Bravo Viguera</h1>
+        <div class="contac-info">
+                Los Andes, Chile · <a href="https://www.linkedin.com/in/ffbv/">Linkedin</a> · +56 9 9611 2679 · ff.bravov@gmail.com
+        </div>
+        <p>
+            Estudiante de la Universidad Técnica Federico Santa María, actualmente me encuentro cursando el
+            tercer año de Ingeniería en Informática. Dentro del desarrollo de mis habilidades cuento con
+            experiencia en diferentes lenguajes de programación y redes computacionales. He participado en
+            proyectos colaborativos, destacándome por mi capacidad para trabajar en equipo y aportar soluciones
+            creativas. Me motiva el aprendizaje continuo y busco constantemente oportunidades para ampliar mis
+            habilidades y contribuir de manera significativa en el ámbito tecnológico.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>EXPERENCIA LABORAL</h3>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div class="company">DELMONTE</div>
+                <div class="location">San Felipe, Chile</div>
+            </div>
+            <div class="position">Operario no especalizado</div>
+            <div class="date">Enero 2024 - Febrero 2024</div>
+        </div>
+        <div>
+            <div>
+                <div>MUNICIPALIDAD CALLELARGA</div>
+                <div>Calle Larga, Chile</div>
+                <div>Praticante</div>
+                <div>Enero 2022 - Febrero 2022</div>
+                    <ul>
+                        <li>Mantención de redes y computadores dentro de la municipalidad.</li>
+                        <li>Proceso de logistica dentro de la municipalidad</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>Educación</h3>
+        <div>
+            <div>
+                <span>UNIVERSIDAD TECNICA FEDERICO SANTA MARIA</span>
+                <span>Viña del Mar, Chile</span>
+                <div>
+                    Ingenieria en Informatica <em>Marzo 2022 - Actualidad</em>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <span>LICEO COMERCIAL DE LOS ANDES</span>
+                <span> Los Andes, Chile</span>
+                <div>
+                    Tecnico Nivel Medio en Conectividad y Redes <em>2018 - 2021</em>
+                    <div>
+                        Certificación de Cisco Networking Academy en
+                        Introducción a la Seguridad Cibernética y Networking
+                        Essentials 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>HABILIDADES TECNICAS</h3>
+        <div class="skills">
+            <strong>Lenguajes de Programacion: </strong> Java, Python, SQL, C++
+        </div>
+        <div>
+            <strong>Frameworks: </strong> SpringBoot, NetBeans, Django
+        </div>
+        <div>
+            <strong>Microservicios: </strong>Desarrollo, comunicacion asincronica/sin, RESTfull APIs
+        </div>
+        <div>
+            <strong>Contenedores: </strong>Docker, Kubernetes
+        </div>
+        <div>
+            <strong>Base de Datos: </strong>Oracle, MySQL
+        </div>
+        <div>
+            <strong>Versionado de Codigo: </strong>Git, Github
+        </div>
+        <div>
+            <strong>Cloud: </strong>AWS (ECS, S3, Lamda)
+        </div>
+        <div>
+            <strong>Metodologias: </strong>Kanban
+        </div>
+        <div>
+            <strong>Seguridad: </strong>JWT
+        </div>
+    </div>
+    <div>
+        <h3>IDIOMAS</h3>
+        <ul>
+            <li>Español (nativo)</li>
+            <li>Ingles (Nivel Medio/Avanzado)</li>
+        </ul>
+    </div>
+    
+    
+</body>
+</html>
